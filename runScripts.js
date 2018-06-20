@@ -1,7 +1,5 @@
 /**
- * Usage: ./fake-pbcontact output.txt 2000
- * * output.txt - The output file.
- * * 2000 - The number of ROWS.
+ *
  */
 
 const fs = require('fs'),
@@ -13,13 +11,7 @@ const obj = JSON.parse(
   fs.readFileSync(path.join(__dirname, 'dapp_config.json'), 'utf8')
 );
 
-const jsonData = obj
-  ? obj
-  : {
-      app_name: 'My App',
-      code: 'var3=4',
-      image: 'base64...',
-    };
+const jsonData = obj ? obj : {};
 
 fs.readFile(filePath, { encoding: 'utf-8' }, function(err, data) {
   if (!err) {
