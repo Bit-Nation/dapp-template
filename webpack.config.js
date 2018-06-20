@@ -1,5 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
+var AssetsPlugin = require('assets-webpack-plugin');
+var assetsPluginInstance = new AssetsPlugin({
+  filename: 'assets.json',
+  includeManifest: 'manifest',
+});
 
 module.exports = {
   entry: ['babel-polyfill', './main.js'],
@@ -18,4 +23,5 @@ module.exports = {
       },
     ],
   },
+  plugins: [assetsPluginInstance],
 };
