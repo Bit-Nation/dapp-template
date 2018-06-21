@@ -1,14 +1,27 @@
 const path = require('path');
 const webpack = require('webpack');
 const fs = require('fs');
+const filePath = path.join(__dirname, 'dist/index.js');
+const outputPath = path.join(__dirname, 'build.json');
+const appIconPath = path.join(__dirname, 'appIcon.png');
 
+const base64_encode = file => {
+  // read binary data
+  const bitmap = fs.readFileSync(file);
+  // convert binary data to base64 encoded string
+  return new Buffer(bitmap).toString('base64');
+};
+
+const obj = JSON.parse(
+  fs.readFileSync(path.join(__dirname, 'dapp_config.json'), 'utf8')
+);
+
+const jsonData = obj ? { ...obj, image: base64_encode(appIconPath) } : {};
+
+console.log('====================================');
+console.log(jsonData);
+console.log('====================================');
 const writeFile = () => {
-  const filePath = path.join(__dirname, 'dist/index.js');
-  const outputPath = path.join(__dirname, 'build.json');
-  const obj = JSON.parse(
-    fs.readFileSync(path.join(__dirname, 'dapp_config.json'), 'utf8')
-  );
-  const jsonData = obj ? obj : {};
   fs.readFile(filePath, { encoding: 'utf-8' }, function(err, data) {
     if (!err) {
       const content = JSON.stringify({
