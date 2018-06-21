@@ -18,9 +18,6 @@ const obj = JSON.parse(
 
 const jsonData = obj ? { ...obj, image: base64_encode(appIconPath) } : {};
 
-console.log('====================================');
-console.log(jsonData);
-console.log('====================================');
 const writeFile = () => {
   fs.readFile(filePath, { encoding: 'utf-8' }, function(err, data) {
     if (!err) {
@@ -42,7 +39,7 @@ const writeFile = () => {
 
 const mode = process.argv[2];
 const compiler = webpack({
-  entry: ['babel-polyfill', './main.js'],
+  entry: ['babel-polyfill', './app.js'],
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
