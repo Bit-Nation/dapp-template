@@ -1,11 +1,11 @@
 # Custom
 
 dist
-build.json
-
+build
 # Created by https://www.gitignore.io/api/macos,visualstudiocode
 
 ### macOS ###
+.idea
 *.DS_Store
 .AppleDouble
 .LSOverride
