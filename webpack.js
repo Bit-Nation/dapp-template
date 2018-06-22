@@ -28,7 +28,7 @@ const appIconPath = path.join(__dirname, 'appIcon.png');
 const mode = process.argv[2]; // get mode argurment from command line
 
 const dappConfig = JSON.parse(
-  fs.readFileSync(path.join(__dirname, 'dapp_config.json'), 'utf8')
+  fs.readFileSync(path.join(__dirname, 'dappConfig.json'), 'utf8')
 );
 
 const dAppMetaData = dappConfig
