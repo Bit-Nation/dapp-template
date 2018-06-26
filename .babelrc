@@ -1,13 +1,7 @@
 {
-  "plugins": ["transform-react-jsx"],
-  "presets": [
-    "stage-0",
-    [
-      "env",
-      {
-        "modules": "umd"
-      }
-    ],
-    "react"
-  ]
+  "presets": ["@babel/preset-env", {
+    "targets": {
+      "esmodules": true
+    }
+  }]
 }

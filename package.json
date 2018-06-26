@@ -2,7 +2,6 @@
   "name": "js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "node webpack.js development",
@@ -12,24 +11,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-env": "^7.0.0-beta.51",
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
     "babel-plugin-external-helpers": "^6.22.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "webpack": "^4.1.0",
     "webpack-cli": "^2.0.10"
   },
   "dependencies": {
-    "@babel/core": "^7.0.0-beta.40",
-    "@babel/preset-env": "^7.0.0-beta.40",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.3",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "fbjs": "^0.8.16",
-    "react": "^16.2.0",
-    "react-reconciler": "^0.7.0"
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-es2015": "^7.0.0-beta.51",
+    "pangea-sdk": "git+https://github.com/Bit-Nation/pangea-sdk.git#0.2.0"
   }
 }
