@@ -11,7 +11,7 @@ const {
 
 // this handler will be called
 // when the user opens your DApp
-setOpenHandler((context) => {
+setOpenHandler((payload, cb) => {
 
     // layout that will be rendered
     const layout = new View(
@@ -28,31 +28,6 @@ setOpenHandler((context) => {
         ]
     );
 
-    // show a modal with "Select Action" as the title
-    // and the rendered layout
-    showModal("Select Action", renderUI(layout))
-
-});
-
-// handle message rendering
-setMessageHandler((dAppMessage, context, cb) => {
-
-    if (dAppMessage.type === "SEND_MONEY") {
-
-        // create layout
-        const layout = new View(
-            {},
-            [
-                new Text(
-                    {},
-                    "This is a send money Message"
-                )
-            ]
-        );
-
-        // render layout
-        return cb(null, layout.toJSON())
-
-    }
+    showModal("Select Action", renderUI(layout), cb)
 
 });
