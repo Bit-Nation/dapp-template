@@ -20,6 +20,6 @@
     "webpack-cli": "^2.0.10"
   },
   "dependencies": {
-    "pangea-sdk": "git+https://github.com/Bit-Nation/pangea-sdk.git#77230009f21c9807d18b05a88554c1879427fe3d"
+    "pangea-sdk": "git+https://github.com/Bit-Nation/pangea-sdk.git#78ff29c32007c272d7d25fdfa2c6de953af1f1a8"
   }
 }
