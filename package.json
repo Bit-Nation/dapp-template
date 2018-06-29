@@ -11,9 +11,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/preset-env": "^7.0.0-beta.51",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-polyfill": "^6.26.0",
@@ -23,8 +20,6 @@
     "webpack-cli": "^2.0.10"
   },
   "dependencies": {
-    "@babel/core": "^7.0.0-beta.51",
-    "@babel/preset-es2015": "^7.0.0-beta.51",
     "pangea-sdk": "git+https://github.com/Bit-Nation/pangea-sdk.git#77230009f21c9807d18b05a88554c1879427fe3d"
   }
 }
