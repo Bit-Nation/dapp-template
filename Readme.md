@@ -1,12 +1,46 @@
-## Pangea DApp template
+# pangea-dapp-template
 
-Pangea DApp template. Have a look at the app.js for an example.
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+TODO: Put more badges here.
 
+> Pangea DApp Template
 
-## How to use this library. 
-All you code form app.js will be bundles into a build.json. 
-The build.json will then be send to pangea. 
+TODO: Fill out this long description.
 
-Use `npm run build:prod` to build a production build. 
-Use `npm run build:dev` to make development builds.
-`build:dev` will watch app.js for changes and rebuild it on changes.
+## Table of Contents
+
+- [Security](#security)
+- [Install](#install)
+- [Usage](#usage)
+- [API](#api)
+- [Maintainers](#maintainers)
+- [Contribute](#contribute)
+- [License](#license)
+
+## Security
+
+## Install
+
+```
+```
+
+## Usage
+
+```
+```
+
+## API
+
+## Maintainers
+
+[@florianlenz](https://github.com/florianlenz)
+
+## Contribute
+
+PRs accepted.
+
+Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+
+## License
+
+MIT © 2018 Bitnation
