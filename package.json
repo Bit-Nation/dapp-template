@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dev": "node webpack.js development",
-    "build:prod": "node webpack.js production"
+    "build-dev": "webpack --mode development webpack.config.js",
+    "build-prod": "webpack --mode production webpack.config.js"
   },
   "keywords": [],
   "author": "",
