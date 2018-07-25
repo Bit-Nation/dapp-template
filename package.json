@@ -20,5 +20,12 @@
   "dependencies": {
     "pangea-sdk": "git+https://github.com/Bit-Nation/pangea-sdk.git#e1575021ad2c17f168a258e68c24d467661bf606",
     "truffle": "^4.1.13"
+  },
+  "pangea_dapp": {
+    "name": {
+      "en-us": "DApp Name"
+    },
+    "engine": "0.1.0",
+    "icon_path": "./appIcon.png"
   }
 }
