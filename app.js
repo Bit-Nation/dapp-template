@@ -1,33 +1,36 @@
 import pangea from 'pangea-sdk'
 
 const {
-    renderUI,
-    View,
-    Text,
     setOpenHandler,
-    setMessageHandler,
-    showModal,
+    newModalUIID,
+    renderModal,
+    Modal,
+    Container
 } = pangea;
 
-// this handler will be called
-// when the user opens your DApp
-setOpenHandler((payload, cb) => {
 
-    // layout that will be rendered
-    const layout = new View(
-        {},
-        [
-            new Text(
-                {},
-                "Hi there"
-            ),
-            new Text(
-                {},
-                "This is the Pange VM"
-            )
-        ]
-    );
+class DemoModal extends Modal {
+    render(){
+        return (
+            <Text>Hi there</Text>
+        )
+    }
+}
 
-    showModal("Select Action", renderUI(layout), cb)
+setOpenHandler((cb) => {
+
+    // obtain a new modal id
+    newModalUIID((error, modalUIID) => {
+
+        if (error){
+            return cb(error)
+        }
+
+        renderModal(<DemoModal container={new Container(modalUIID)}/>, () => {
+            // once the modal got rendered, we can "close" the open process
+            cb()
+        })
+
+    })
 
 });
