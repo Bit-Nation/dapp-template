@@ -4,6 +4,8 @@ const {
     setOpenHandler,
     newModalUIID,
     renderModal,
+    renderMessage,
+    setMessageRenderer,
     Modal,
     Container
 } = pangea;
@@ -15,6 +17,12 @@ class DemoModal extends Modal {
             <Text>Hi there</Text>
         )
     }
+}
+
+function DemoMessage(props) {
+    return (
+        <Text>I am a message</Text>
+    )
 }
 
 setOpenHandler((cb) => {
@@ -31,6 +39,19 @@ setOpenHandler((cb) => {
             cb()
         })
 
+    })
+
+});
+
+/**
+ * @desc set out message handler
+ */
+setMessageRenderer((payload, cb) => {
+
+    const {message} = payload;
+
+    renderMessage(<DemoMessage/>, (jsx) => {
+        cb(null, jsx)
     })
 
 });
